@@ -14,15 +14,16 @@ export default function SignUpPage() {
   return (
     <main className="flex flex-row">
       <section className="h-screen w-1/2 border">
+        {/* TODO: Change the image below to something more user-friendly */}
         <Image
           className="h-full "
           src={doctorImg}
           alt="A doctor forming a heart shape with her stestoscope"
         />
       </section>
-      <section className="flex w-1/2 flex-col">
+      <section className="flex w-1/2 flex-col items-center space-y-10">
         <BendaLogo />
-        <h1>Create account</h1>
+        <h1 className="text-4xl font-bold">Create account</h1>
         <SignUpForm />
       </section>
     </main>

@@ -15,7 +15,7 @@ export default function LoginForm() {
             placeholder="Enter email"
           />
         </span>
-        <span className="space-x-5 space-y-6">
+        <span className="space-x-6 space-y-6">
           <label className="font-medium" htmlFor="passowrd">
             Password
           </label>
@@ -35,7 +35,7 @@ export default function LoginForm() {
           Log in
         </button>
         <p className="text-sm">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link className="font-medium hover:underline" href="/sign-up">
             Register here
           </Link>
