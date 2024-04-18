@@ -5,7 +5,7 @@ export default function LoginForm() {
     <form className="" action="" method="post">
       <div className="grid w-auto flex-col justify-items-start ">
         <span className="space-x-12  space-y-6">
-          <label className="font-medium" htmlFor="email">
+          <label className="text-lg font-medium" htmlFor="email">
             Email
           </label>
           <input
@@ -13,10 +13,11 @@ export default function LoginForm() {
             type="email"
             name="email"
             placeholder="Enter email"
+            required
           />
         </span>
-        <span className="space-x-6 space-y-6">
-          <label className="font-medium" htmlFor="passowrd">
+        <span className="space-x-4 space-y-6">
+          <label className="text-lg font-medium" htmlFor="passowrd">
             Password
           </label>
           <input
@@ -24,6 +25,7 @@ export default function LoginForm() {
             type="password"
             name="password"
             placeholder="Enter password"
+            required
           />
         </span>
       </div>
