@@ -12,7 +12,7 @@ export default function LoginPage() {
     <main className="flex w-full flex-col items-center justify-center py-5">
       <BendaLogo />
 
-      <h1 className="pb-10 pt-20 text-2xl font-bold">Log in</h1>
+      <h1 className="pb-10 pt-20 text-4xl font-bold">Log in</h1>
       <section className="">
         <LoginForm />
       </section>
