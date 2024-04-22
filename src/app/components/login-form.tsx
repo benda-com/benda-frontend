@@ -1,8 +1,64 @@
+"use client";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 export default function LoginForm() {
+  // const [formData, setFormData] = useState({
+  //   email: "",
+  //   password: "",
+  // });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  // const handleChange = (e: any) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value,
+  //   });
+  // };
+
+  const handleSubmit = (e: any) => {
+    // perform post request here
+    e.preventDefault();
+    loginUser(email, password);
+    // alert(formData.email, formData.password);
+  };
+
+  const loginUser = async (email: string, password: string) => {
+    const base64encodedData = Buffer.from(`${email}:${password}`).toString(
+      "base64",
+    );
+    await fetch("http://127.0.0.1:8000/api/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Authorization: `Basic ${base64encodedData}`,
+      },
+    })
+      // const res = await response.json()
+      .then((response) => {
+        response.json().then((res) => {
+          let token = res.token;
+          console.log("token: ", token);
+        });
+      })
+      .then((formData) => {
+        // setUser((username) => [data, ...username]);
+        setEmail("");
+        setPassword("");
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
   return (
-    <form className="" action="" method="post">
+    <form onSubmit={handleSubmit} className="" action="" method="post">
       <div className="grid w-auto flex-col justify-items-start ">
         <span className="space-x-12  space-y-6">
           <label className="text-lg font-medium" htmlFor="email">
@@ -14,10 +70,12 @@ export default function LoginForm() {
             name="email"
             placeholder="Enter email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </span>
         <span className="space-x-4 space-y-6">
-          <label className="text-lg font-medium" htmlFor="passowrd">
+          <label className="text-lg font-medium" htmlFor="password">
             Password
           </label>
           <input
@@ -26,6 +84,8 @@ export default function LoginForm() {
             name="password"
             placeholder="Enter password"
             required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </span>
       </div>
