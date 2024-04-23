@@ -1,64 +1,25 @@
+// TODO: Before redirecting the  user to the dashboard show an animation to confirm login
+// TODO: Change the button to a component
+
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
+import { loginUser } from "../lib/actions";
 
 export default function LoginForm() {
-  // const [formData, setFormData] = useState({
-  //   email: "",
-  //   password: "",
-  // });
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const handleChange = (e: any) => {
-  //   const { name, value } = e.target;
-  //   setFormData({
-  //     ...formData,
-  //     [name]: value,
-  //   });
-  // };
-
   const handleSubmit = (e: any) => {
-    // perform post request here
     e.preventDefault();
     loginUser(email, password);
-    // alert(formData.email, formData.password);
-  };
-
-  const loginUser = async (email: string, password: string) => {
-    const base64encodedData = Buffer.from(`${email}:${password}`).toString(
-      "base64",
-    );
-    await fetch("http://127.0.0.1:8000/api/login", {
-      method: "POST",
-      body: JSON.stringify({
-        email: email,
-        password: password,
-      }),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-        Authorization: `Basic ${base64encodedData}`,
-      },
-    })
-      // const res = await response.json()
-      .then((response) => {
-        response.json().then((res) => {
-          let token = res.token;
-          console.log("token: ", token);
-        });
-      })
-      .then((formData) => {
-        // setUser((username) => [data, ...username]);
-        setEmail("");
-        setPassword("");
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="" action="" method="post">
+    <form onSubmit={handleSubmit} className="" action="#" method="post">
       <div className="grid w-auto flex-col justify-items-start ">
         <span className="space-x-12  space-y-6">
           <label className="text-lg font-medium" htmlFor="email">
@@ -93,6 +54,7 @@ export default function LoginForm() {
         <button
           className="my-5 w-20 justify-items-center rounded-lg border bg-blue-600 py-1 text-sm text-white hover:bg-blue-500"
           type="submit"
+          onClick={() => router.push("/dashboard")}
         >
           Log in
         </button>
