@@ -1,5 +1,4 @@
 // TODO: Before redirecting the  user to the dashboard show an animation to confirm login
-// TODO: Change the button to a component
 
 "use client";
 import Link from "next/link";
@@ -7,6 +6,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import { loginUser } from "../lib/actions";
+import { Button } from "./widgets";
 
 export default function LoginForm() {
   const router = useRouter();
@@ -51,13 +51,7 @@ export default function LoginForm() {
         </span>
       </div>
       <div className="grid w-auto flex-col justify-items-center ">
-        <button
-          className="my-5 w-20 justify-items-center rounded-lg border bg-blue-600 py-1 text-sm text-white hover:bg-blue-500"
-          type="submit"
-          onClick={() => router.push("/dashboard")}
-        >
-          Log in
-        </button>
+        <Button name="Login" redirectLocation="/dashboard" />
         <p className="text-sm">
           Don&apos;t have an account?{" "}
           <Link className="font-medium hover:underline" href="/sign-up">
