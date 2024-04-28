@@ -1,6 +1,6 @@
-import { Montserrat } from "next/font/google";
+import { Arimo } from "next/font/google";
 import "./globals.css";
-const montserrat = Montserrat({ weight: ["400"], subsets: ["latin"] });
+const arimo = Arimo({ weight: ["400"], subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={arimo.className}>{children}</body>
     </html>
   );
 }
