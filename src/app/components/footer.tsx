@@ -8,8 +8,8 @@ import appleStore from "@/app/images/apple-store.png";
 export const Footer = () => {
   return (
     <>
-      <div className="flex flex-row justify-evenly">
-        <div className="">
+      <section className="flex flex-row justify-evenly border-t-2 py-10">
+        <div className="flex flex-col space-y-3">
           <BendaLogo width={25} height={50} />
           <Link href="#">
             <Image
@@ -31,45 +31,63 @@ export const Footer = () => {
         <ul className="space-y-3 ">
           <li className="pb-2 text-lg font-bold">Social Media</li>
           <li>
-            <Link href="#">Linkedin</Link>
+            <Link className="hover:underline" href="#">
+              Linkedin
+            </Link>
           </li>
           <li>
-            <Link href="#">Facebook</Link>
+            <Link className="hover:underline" href="#">
+              Facebook
+            </Link>
           </li>
         </ul>
         <ul className="space-y-3 ">
           <li className="pb-2 text-lg font-bold">Pages</li>
           <li>
-            <Link href="#">Products</Link>
+            <Link className="hover:underline" href="#">
+              Products
+            </Link>
           </li>
           <li>
-            <Link href="#">Pricing</Link>
+            <Link className="hover:underline" href="#">
+              Pricing
+            </Link>
           </li>
           <li>
-            <Link href="#">About Us</Link>
+            <Link className="hover:underline" href="#">
+              About Us
+            </Link>
           </li>
         </ul>
         <ul className="space-y-3 ">
           <li className="pb-2 text-lg font-bold">Links</li>
           <li>
-            <Link href="#">Contact</Link>
+            <Link className="hover:underline" href="#">
+              Contact
+            </Link>
           </li>
           <li>
-            <Link href="#">Careers</Link>
+            <Link className="hover:underline" href="#">
+              Careers
+            </Link>
           </li>
         </ul>
-        <div className="space-y-3 ">
+        <form method="post" action="#" className="space-y-3 ">
           <div className=" pb-2 text-lg font-bold">Subscribe</div>
           <input
             className="border bg-[#E0ECFD66] px-10 py-3"
             type="email"
             placeholder="Enter your email"
+            required
           />
+          <button className=" pl-3" type="submit">
+            <i className="fa-solid fa-paper-plane "></i>
+          </button>
           <p className=" text-gray-500">
             Join our newsletter to stay up to date on features and releases
           </p>
-        </div>
-      </div>
+        </form>
+      </section>
       {/* <div className="">
         © Benda 2023. All rights reserved • Privacy Policy
       </div> */}
