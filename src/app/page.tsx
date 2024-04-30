@@ -9,6 +9,7 @@ import { TestimonialCard } from "./components/cards";
 import aws from "@/app/images/aws.png";
 import ey from "@/app/images/ey.png";
 import orange from "@/app/images/orange.png";
+import { Faq } from "./components/faq";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col space-y-20">
       <Nav />
       <section className="flex flex-col py-10">
         <h1 className="place-self-center py-5 text-4xl font-semibold">
@@ -29,10 +30,22 @@ export default function Home() {
           <TestimonialCard />
         </div>
       </section>
-      <section className="flex flex-col">
+      <section className="flex flex-col items-center space-y-10">
         <h1 className="place-self-center py-5 text-4xl font-semibold">
           Frequently Ask Questions(FAQ)
         </h1>
+      <Faq question={"How does the platform assist with virtual event planning ?"} 
+      answer={"The platform assis with virtual event planning customizable templates attendee registrations"}
+      />
+      <Faq question={"How does the platform assist with virtual event planning ?"} 
+      answer={"The platform assis with virtual event planning customizable templates attendee registrations"}
+      />
+      <Faq question={"How does the platform assist with virtual event planning ?"} 
+      answer={"The platform assis with virtual event planning customizable templates attendee registrations"}
+      />
+      <Faq question={"How does the platform assist with virtual event planning ?"} 
+      answer={"The platform assis with virtual event planning customizable templates attendee registrations"}
+      />
       </section>
       <section className="flex flex-col">
         <h1 className="place-self-center py-5 text-4xl font-semibold">
