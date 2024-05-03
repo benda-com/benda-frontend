@@ -16,7 +16,7 @@ export default function Nav() {
         <Link className="text-blue-primary text-lg" href="/">
           Pricing
         </Link>
-        <Link className="text-blue-primary text-lg" href="/">
+        <Link className="text-blue-primary text-lg" href="/about">
           About
         </Link>
       </ul>

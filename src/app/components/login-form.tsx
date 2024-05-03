@@ -3,13 +3,11 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 
 import { loginUser } from "../lib/actions";
 import { Button } from "./widgets";
 
 export default function LoginForm() {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
