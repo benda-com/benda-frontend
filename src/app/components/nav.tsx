@@ -7,16 +7,16 @@ export default function Nav() {
     <nav className="flex w-full items-center justify-between  border pl-10">
       <BendaLogo />
       <ul className="flex space-x-10 pl-10">
-        <Link className="text-blue-primary text-lg" href="/">
+        <Link className="text-lg text-blue-primary" href="/">
           Home
         </Link>
-        <Link className="text-blue-primary text-lg" href="/">
+        <Link className="text-lg text-blue-primary" href="/">
           Products
         </Link>
-        <Link className="text-blue-primary text-lg" href="/">
+        <Link className="text-lg text-blue-primary" href="/pricing">
           Pricing
         </Link>
-        <Link className="text-blue-primary text-lg" href="/about">
+        <Link className="text-lg text-blue-primary" href="/about">
           About
         </Link>
       </ul>
@@ -29,7 +29,7 @@ export default function Nav() {
         </Link>
         <Link
           href="/sign-up"
-          className="bg-blue-primary rounded-3xl border px-10 py-2 text-white hover:bg-blue-500"
+          className="rounded-3xl border bg-blue-primary px-10 py-2 text-white hover:bg-blue-500"
         >
           Sign Up
         </Link>

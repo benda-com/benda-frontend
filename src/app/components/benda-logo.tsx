@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import bendaLogo from "../images/logo.png";
 
-export default function BendaLogo(width = 75, height = 75) {
+export default function BendaLogo({ width = 75, height = 75 }) {
   return (
     <Link href="/">
       <Image

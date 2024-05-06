@@ -98,3 +98,89 @@ export const TeamMemberCard = () => {
     </div>
   );
 };
+
+export const PricingCard = () => {
+  return (
+    <div className="flex flex-col items-center space-y-5 rounded-2xl border bg-white px-5 py-5 shadow-lg">
+      <h2 className="text-3xl font-black text-blue-primary">Bènda Basic</h2>
+      <div className="flex space-x-2">
+        <span className="text-4xl font-semibold">$0</span>
+        <span>per user per month</span>
+      </div>
+      <p>Basic features for up to 10 users</p>
+      <h3 className="text-lg font-semibold">Features</h3>
+      <p>Included in our Benda Basic Plan</p>
+      <ul className="space-y-2">
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+      </ul>
+      <a
+        className="rounded-lg border bg-blue-primary px-3 py-3 text-white hover:bg-blue-500"
+        href=""
+      >
+        Start for free
+      </a>
+    </div>
+  );
+};
+
+export const PricingCardBlack = () => {
+  return (
+    <div className="flex flex-col items-center space-y-5 rounded-2xl  bg-[#0A2141] px-5 py-5 text-white shadow-xl shadow-[#a7c3e9]">
+      <h2 className="text-3xl font-black text-[#9DC6FF]">Bènda Basic</h2>
+      <div className="flex space-x-2">
+        <span className="text-4xl font-semibold">$25</span>
+        <span>per user per month</span>
+      </div>
+      <p>Basic features for up to 10 users</p>
+      <h3 className="text-lg font-semibold">Features</h3>
+      <p>Included in our Benda Basic Plan</p>
+      <ul className="space-y-2">
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+        <li className="space-x-2">
+          <i className="fa-solid fa-check"></i>
+          <span>1 month free access to our app</span>
+        </li>
+      </ul>
+      <a
+        className="rounded-lg  bg-[#9DC6FF] px-3 py-3 text-black hover:bg-blue-200"
+        href=""
+      >
+        Start for free
+      </a>
+    </div>
+  );
+};
