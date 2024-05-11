@@ -1,14 +1,16 @@
-//TODO: Implement a function to validate that the password and the confirm password matches
-// TODO: Before redirecting the user user to the login show an animation to confirm signup
+// TODO: Before redirecting the user to the login show an animation to confirm signup
 "use client";
 
 import Link from "next/link";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { signUpUser } from "../lib/actions";
 import { Button } from "./widgets";
 
 export default function SignUpForm() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -33,27 +35,29 @@ export default function SignUpForm() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     let newErrors: any = {};
-    if (formData.password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters long";
-    }
 
-    if (formData.confirmPassword !== formData.password) {
-      newErrors.confirmPassword = "Passwords do not match";
+    switch (true) {
+      case formData.password.length < 6:
+        newErrors.password = "Password must be at least 6 characters long";
+        break;
+      case formData.confirmPassword !== formData.password:
+        newErrors.confirmPassword = "Passwords do not match";
+        break;
+      default:
+        break;
     }
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      // Submit logic here
-      console.log("we are in the submit");
+      signUpUser(
+        formData.email,
+        formData.first_name,
+        formData.last_name,
+        formData.password,
+      );
+      router.push("/login");
     }
-    signUpUser(
-      formData.email,
-      formData.first_name,
-      formData.last_name,
-      formData.password,
-    );
   };
-
   return (
     <form
       onSubmit={handleSubmit}
@@ -123,14 +127,14 @@ export default function SignUpForm() {
             className="rounded-md border py-1"
             type="password"
             placeholder="Confirm password"
-            name="confirm-password"
+            name="confirmPassword"
             required
             onChange={handleChange}
           />
           {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
         </div>
       </div>
-      <Button name="Sign Up" redirectLocation="/login" />
+      <Button name="Sign Up" />
       <p className="text-sm">
         Already having an account?
         <Link className="font-medium hover:underline " href="/login">

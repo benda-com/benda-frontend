@@ -49,7 +49,7 @@ export default function LoginForm() {
         </span>
       </div>
       <div className="grid w-auto flex-col justify-items-center ">
-        <Button name="Login" redirectLocation="/dashboard" />
+        <Button name="Login" />
         <p className="text-sm">
           Don&apos;t have an account?{" "}
           <Link className="font-medium hover:underline" href="/sign-up">
