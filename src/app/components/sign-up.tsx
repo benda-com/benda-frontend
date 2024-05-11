@@ -1,4 +1,3 @@
-// TODO: Before redirecting the user to the login show an animation to confirm signup
 "use client";
 
 import Link from "next/link";
@@ -117,7 +116,7 @@ export default function SignUpForm() {
             required
             onChange={handleChange}
           />
-          {errors.password && <p>{errors.password}</p>}
+          {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
         </div>
         <div className="flex flex-col md:block md:space-x-4 md:space-y-6">
           <label className="text-lg" htmlFor="confirm-password">
@@ -131,7 +130,9 @@ export default function SignUpForm() {
             required
             onChange={handleChange}
           />
-          {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+          {errors.confirmPassword && (
+            <p style={{ color: "red" }}>{errors.confirmPassword}</p>
+          )}
         </div>
       </div>
       <Button name="Sign Up" />
