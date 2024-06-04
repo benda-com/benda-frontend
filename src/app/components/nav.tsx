@@ -4,9 +4,9 @@ import BendaLogo from "./benda-logo";
 
 export default function Nav() {
   return (
-    <nav className="flex w-full items-center justify-between  border pl-10">
+    <nav className="flex w-full items-center justify-between  border md:pl-10">
       <BendaLogo />
-      <ul className="flex space-x-10 pl-10">
+      <ul className="hidden space-x-10 pl-10 md:flex">
         <Link className="text-lg text-blue-primary" href="/">
           Home
         </Link>
@@ -20,7 +20,7 @@ export default function Nav() {
           About
         </Link>
       </ul>
-      <span className="space-x-10 pr-10">
+      <span className="hidden space-x-10 pr-10 md:flex">
         <Link
           href="/login"
           className="rounded-3xl border bg-[#1C1678] px-10 py-2 text-white hover:bg-blue-800"
