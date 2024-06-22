@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useState } from "react";
 
 import { Avatar } from "./widgets";
-import meAvartar from "@/app/images/image.png";
 
 export const TestimonialCard = (props: any) => {
   let name = props.name;
@@ -44,7 +43,10 @@ export const AboutCard = (props: { heading: string; description: string }) => {
         <h2 className="text-2xl text-blue-primary">{props.heading}</h2>
         <p>{props.description}</p>
       </div>
-      <Image src={meAvartar} alt="" />
+      <Image
+        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
+        alt=""
+      />
     </section>
   );
 };
@@ -55,7 +57,10 @@ export const InverseAboutCard = (props: {
 }) => {
   return (
     <section className="flex w-1/2 flex-row items-center space-x-10">
-      <Image src={meAvartar} alt="" />
+      <Image
+        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
+        alt=""
+      />
       <div className="flex w-1/3 flex-col space-y-5">
         <h2 className="text-2xl text-blue-primary">{props.heading}</h2>
         <p>{props.description}</p>
@@ -69,7 +74,7 @@ export const TeamMemberCard = () => {
     <div className="flex w-1/2 flex-row items-center space-x-10">
       <Image
         className="rounded-lg border"
-        src={meAvartar}
+        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
         alt=""
         height={300}
         width={300}

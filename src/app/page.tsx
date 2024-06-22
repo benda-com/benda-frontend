@@ -6,9 +6,6 @@ import Nav from "@/app/components/nav";
 import "./globals.css";
 import { Footer } from "./components/footer";
 import { TestimonialCard } from "./components/cards";
-import aws from "@/app/images/aws.png";
-import ey from "@/app/images/ey.png";
-import orange from "@/app/images/orange.png";
 import { Faq } from "./components/faq";
 import { HeroBanner, WatchItem, AppItem } from "./components/hero";
 
@@ -80,13 +77,29 @@ export default function Home() {
         </h1>
         <div className="flex flex-row  justify-evenly">
           <Link href="#">
-            <Image src={ey} alt="EY" />
+            <Image
+              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/ey.png"
+              alt="EY"
+              width={200}
+              height={200}
+            />
           </Link>
           <Link href="#">
-            <Image src={orange} alt="EY" />
+            <Image
+              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/orange.png"
+              alt="EY"
+              width={500}
+              height={500}
+            />
           </Link>
           <Link href="#">
-            <Image className=" pt-11" src={aws} alt="EY" />
+            <Image
+              className=" pt-11"
+              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/aws.png"
+              alt="EY"
+              width={200}
+              height={200}
+            />
           </Link>
         </div>
       </section>

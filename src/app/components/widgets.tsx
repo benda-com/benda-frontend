@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import img from "@/app/images/image.png";
-
 export const Button = (props: any) => {
   let name = props.name;
   return (
@@ -19,7 +17,7 @@ export const Avatar = () => {
     <>
       <Image
         className="rounded-full "
-        src={img}
+        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
         alt="Avatar"
         width={100}
         height={100}

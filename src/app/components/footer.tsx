@@ -2,18 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import BendaLogo from "./benda-logo";
-import googleStore from "../images/google-store.png";
-import appleStore from "@/app/images/apple-store.png";
 
 export const Footer = () => {
   return (
     <>
       <section className="flex flex-row justify-evenly border-t-2 py-10">
         <div className="flex flex-col space-y-3">
-          <BendaLogo width={25} height={50} />
+          <BendaLogo />
           <Link href="#">
             <Image
-              src={googleStore}
+              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/google-store.png"
               alt="Download on google-store"
               width={150}
               height={150}
@@ -21,7 +19,7 @@ export const Footer = () => {
           </Link>
           <Link href="#">
             <Image
-              src={appleStore}
+              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/apple-store.png"
               alt="Download on apple-store"
               width={150}
               height={150}
