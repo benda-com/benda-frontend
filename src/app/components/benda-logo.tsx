@@ -1,16 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import bendaLogo from "../images/logo.png";
-
-export default function BendaLogo({ width = 75, height = 75 }) {
+export default function BendaLogo() {
   return (
     <Link href="/">
       <Image
-        src={bendaLogo}
+        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/logo.png"
         alt="Logo of Benda"
-        width={width}
-        height={height}
+        width="200"
+        height="200"
       />
     </Link>
   );
