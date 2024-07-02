@@ -15,7 +15,7 @@ export const TestimonialCard = (props: any) => {
   let role = props.role;
   role = "Python developer";
   return (
-    <div className="flex w-1/4 flex-col space-y-3 rounded-lg border border-gray-300 px-5 py-5 shadow-xl">
+    <div className="flex w-[32rem] flex-col space-y-3 rounded-lg border border-gray-300 px-5 py-5 shadow-xl md:w-1/4">
       <p className="text-lg">{description}</p>
       <Avatar />
       <div className="text-lg font-bold">{name}</div>

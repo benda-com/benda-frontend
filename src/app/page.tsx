@@ -28,14 +28,14 @@ export default function Home() {
         <h1 className="place-self-center py-5 text-4xl font-semibold">
           Testimonies
         </h1>
-        <div className="flex flex-row  justify-evenly">
+        <div className="flex flex-col justify-evenly space-y-20  md:flex-row md:space-y-0">
           <TestimonialCard />
           <TestimonialCard />
           <TestimonialCard />
         </div>
       </section>
-      <section className="flex flex-col items-center space-y-10">
-        <h1 className="place-self-center py-5 text-4xl font-semibold">
+      <section className="flex flex-col space-y-10 border md:items-center">
+        <h1 className="place-self-center py-5 text-2xl font-semibold md:text-4xl">
           Frequently Ask Questions(FAQ)
         </h1>
         <Faq
@@ -75,7 +75,7 @@ export default function Home() {
         <h1 className="place-self-center py-5 text-4xl font-semibold">
           Powered By
         </h1>
-        <div className="flex flex-row  justify-evenly">
+        <div className="flex flex-col justify-evenly  md:flex-row">
           <Link href="#">
             <Image
               src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/ey.png"

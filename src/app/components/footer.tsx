@@ -6,7 +6,7 @@ import BendaLogo from "./benda-logo";
 export const Footer = () => {
   return (
     <>
-      <section className="flex flex-row justify-evenly border-t-2 py-10">
+      <section className="flex flex-col-reverse items-center justify-evenly border-t-2 py-10 md:flex-row">
         <div className="flex flex-col space-y-3">
           <BendaLogo />
           <Link href="#">

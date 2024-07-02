@@ -28,8 +28,8 @@ export const HeroBanner = () => {
 
 export const WatchItem = () => {
   return (
-    <section className="flex justify-around border">
-      <div className="w-1/2 space-y-5">
+    <section className="flex flex-col-reverse justify-around border md:flex-row">
+      <div className="w-auto space-y-5 pt-10">
         <h3 className="font-bold">
           Curabitur lobortis at metus ac egestas. Cras suscipit neque diam
         </h3>
@@ -58,7 +58,7 @@ export const WatchItem = () => {
 
 export const AppItem = () => {
   return (
-    <section className="flex justify-around border">
+    <section className="flex flex-col justify-around border md:flex-row">
       <div>
         <Image
           width={250}
@@ -67,7 +67,7 @@ export const AppItem = () => {
           alt="A pregnant woman and her baby"
         />
       </div>
-      <div className="w-1/2 space-y-5">
+      <div className="w-auto space-y-5 pt-10">
         <h3 className="font-bold">
           Curabitur lobortis at metus ac egestas. Cras suscipit neque diam
         </h3>
