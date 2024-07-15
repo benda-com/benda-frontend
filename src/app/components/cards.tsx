@@ -46,6 +46,8 @@ export const AboutCard = (props: { heading: string; description: string }) => {
       <Image
         src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
         alt=""
+        width={350}
+        height={350}
       />
     </section>
   );
@@ -60,6 +62,8 @@ export const InverseAboutCard = (props: {
       <Image
         src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
         alt=""
+        width={350}
+        height={135}
       />
       <div className="flex w-1/3 flex-col space-y-5">
         <h2 className="text-2xl text-blue-primary">{props.heading}</h2>
