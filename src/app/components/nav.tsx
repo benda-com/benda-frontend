@@ -13,16 +13,22 @@ export default function Nav() {
       <nav className="flex w-full items-center justify-between  border md:pl-10">
         <BendaLogo />
         <ul className="hidden space-x-10 pl-10 md:flex">
-          <Link className="text-lg text-blue-primary" href="/">
+          <Link className="text-lg text-blue-primary hover:underline" href="/">
             Home
           </Link>
-          <Link className="text-lg text-blue-primary" href="/">
+          <Link className="text-lg text-blue-primary hover:underline" href="/">
             Products
           </Link>
-          <Link className="text-lg text-blue-primary" href="/pricing">
+          <Link
+            className="text-lg text-blue-primary hover:underline"
+            href="/pricing"
+          >
             Pricing
           </Link>
-          <Link className="text-lg text-blue-primary" href="/about">
+          <Link
+            className="text-lg text-blue-primary hover:underline"
+            href="/about"
+          >
             About
           </Link>
         </ul>

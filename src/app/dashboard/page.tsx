@@ -1,3 +1,3 @@
 export default function Dashboard() {
-  return <main>Overview page</main>;
+  return <section className="h-full grow border">Overview page</section>;
 }

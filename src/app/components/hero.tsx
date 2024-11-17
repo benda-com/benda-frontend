@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const HeroBanner = () => {
   return (
-    <section className="border px-20 md:flex">
+    <section className="px-20 md:flex">
       <div className="space-y-10 md:place-self-center">
         <h1 className="text-6xl font-bold">Make your pregnancy successful</h1>
         <p className="md:w-1/2 ">
@@ -28,7 +28,7 @@ export const HeroBanner = () => {
 
 export const WatchItem = () => {
   return (
-    <section className="flex flex-col-reverse justify-around border md:flex-row">
+    <section className="flex flex-col-reverse justify-around  md:flex-row">
       <div className="w-auto space-y-5 pt-10">
         <h3 className="font-bold">
           Curabitur lobortis at metus ac egestas. Cras suscipit neque diam
@@ -58,7 +58,7 @@ export const WatchItem = () => {
 
 export const AppItem = () => {
   return (
-    <section className="flex flex-col justify-around border md:flex-row">
+    <section className="flex flex-col justify-around  md:flex-row">
       <div>
         <Image
           width={250}

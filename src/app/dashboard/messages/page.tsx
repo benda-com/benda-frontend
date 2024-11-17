@@ -1,5 +1,5 @@
 const Page = () => {
-  return <h1>Messages page</h1>;
+  return <section className="h-full grow border">Messages page</section>;
 };
 
 export default Page;

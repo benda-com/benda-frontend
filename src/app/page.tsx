@@ -34,7 +34,7 @@ export default function Home() {
           <TestimonialCard />
         </div>
       </section>
-      <section className="flex flex-col space-y-10 border md:items-center">
+      <section className="flex flex-col space-y-10  md:items-center">
         <h1 className="place-self-center py-5 text-2xl font-semibold md:text-4xl">
           Frequently Ask Questions(FAQ)
         </h1>
