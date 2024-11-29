@@ -15,7 +15,7 @@ export const HeroBanner = () => {
           Get started
         </button>
       </div>
-      <div>
+      <div className="hidden md:block">
         <Image
           width={500}
           height={500}
