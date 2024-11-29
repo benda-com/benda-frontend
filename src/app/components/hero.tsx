@@ -1,4 +1,5 @@
 import Image from "next/image";
+import mobileAppImage from "../images/mobile-app2.png";
 
 export const HeroBanner = () => {
   return (
@@ -29,22 +30,30 @@ export const HeroBanner = () => {
 export const WatchItem = () => {
   return (
     <section className="flex flex-col-reverse justify-around  md:flex-row">
-      <div className="w-auto space-y-5 pt-10">
-        <h3 className="font-bold">
-          Curabitur lobortis at metus ac egestas. Cras suscipit neque diam
+      <div className="space-y-5  pt-10 md:w-1/2">
+        <h3 className="text-center font-bold md:text-left">
+          Smart Pregnancy Monitor Watch
         </h3>
-        <p>
-          Maecenas sodales fermentum pellentesque neque enim, efficitur a rutrum
-          sit amet, efficitur eget odio.
+        <p className="">
+          The Smart Pregnancy Monitor Watch is a cutting-edge device designed to
+          help expectant mothers monitor essential health parameters like blood
+          pressure, temperature, and oxygen saturation with ease and accuracy.
+          With real-time tracking and seamless integration with our mobile app,
+          this smartwatch ensures that you and your healthcare provider are
+          always informed.
         </p>
         <ul className="list-disc pl-4">
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
+          <li>
+            Continuous monitoring of blood pressure, temperature, and oxygen
+            saturation
+          </li>
+          <li>Real-time data synchronization with the mobile app</li>
+          <li>Comfortable and easy to wear during daily activities</li>
+          <li>Alerts for abnormal vital signs</li>
+          <li>Water-resistant design for everyday use</li>
         </ul>
       </div>
-      <div>
+      <div className="flex w-auto justify-center  md:flex-none md:justify-normal">
         <Image
           width={250}
           height={250}
@@ -59,27 +68,39 @@ export const WatchItem = () => {
 export const AppItem = () => {
   return (
     <section className="flex flex-col justify-around  md:flex-row">
-      <div>
+      <div className="flex w-auto justify-center  md:flex-none md:justify-normal">
         <Image
           width={250}
           height={250}
-          src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/watch-img.png"
+          src={mobileAppImage}
           alt="A pregnant woman and her baby"
         />
       </div>
-      <div className="w-auto space-y-5 pt-10">
-        <h3 className="font-bold">
-          Curabitur lobortis at metus ac egestas. Cras suscipit neque diam
+      <div className="space-y-5 pt-10 md:w-1/2">
+        <h3 className="text-center font-bold md:text-left">
+          Pregnancy Companion Mobile App
         </h3>
         <p>
-          Maecenas sodales fermentum pellentesque neque enim, efficitur a rutrum
-          sit amet, efficitur eget odio.
+          Our Pregnancy Companion App is the perfect partner to the Smart
+          Pregnancy Monitor Watch. This powerful app allows pregnant women to
+          stay connected to their healthcare providers, share vital health
+          parameters, and receive real-time feedback. With AI-powered
+          recommendations and alerts, the app ensures a healthier, safer
+          pregnancy journey.
         </p>
         <ul className="list-disc pl-4">
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
-          <li>Donec viverra, dolor vel blandit sodales</li>
+          <li>
+            Seamless communication with healthcare providers via chat or video
+          </li>
+          <li>Share vital health data with doctors in real-time</li>
+          <li>Alerts when health parameters exceed normal levels</li>
+          <li>AI-generated tips and recommendations for a healthy pregnancy</li>
+          <li>Appointment scheduling with doctors</li>
+          <li>Data history and insights for better pregnancy management</li>
+          <li>
+            Customizable notifications for medication reminders and health
+            check-ups
+          </li>
         </ul>
       </div>
     </section>
