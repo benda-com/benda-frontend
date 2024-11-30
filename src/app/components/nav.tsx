@@ -1,16 +1,40 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 import BendaLogo from "./benda-logo";
-import { useState } from "react";
+// import "../globals.css";
 
 export default function Nav() {
   const [MenuIcon, setMenuIcon] = useState(false);
 
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const pageHeight = document.documentElement.scrollHeight;
+
+      if (scrollPosition >= pageHeight) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
-      <nav className="flex w-full items-center justify-between  border md:pl-10">
+      <nav
+        className={`sticky top-0 z-50 flex w-full transform items-center justify-between border bg-white transition-transform duration-500 ease-in-out md:pl-10 ${
+          isVisible ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
         <BendaLogo />
         <ul className="hidden space-x-10 pl-10 md:flex">
           <Link className="text-lg text-blue-primary hover:underline" href="/">
@@ -74,9 +98,9 @@ export default function Nav() {
         </button>
       </nav>
       <div
-        className={`long-text rollout-container ${MenuIcon ? "expanded" : ""}`}
+        className={`long-text rollout-container sticky top-[60px] z-20 transform  bg-white transition-transform duration-500 ease-in-out ${MenuIcon && isVisible ? "expanded  translate-y-0" : "-translate-y-full"}`}
       >
-        <ul className="flex flex-col md:hidden">
+        <ul className="flex flex-col items-center md:hidden">
           <Link className=" text-lg text-blue-primary" href="/">
             Home
           </Link>

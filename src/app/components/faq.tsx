@@ -17,7 +17,9 @@ export const Faq = (props: { question: string; answer: string }) => {
           )}
         </button>
       </div>
-      <div className={`long-text text-gray-600 ${collapse ? "expanded" : ""}`}>
+      <div
+        className={`long-text transform text-gray-600 transition-transform duration-500 ease-in-out ${collapse ? "expanded translate-y-0" : "-translate-y-full"}`}
+      >
         <p>{props.answer}</p>
       </div>
     </div>
