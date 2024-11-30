@@ -108,87 +108,93 @@ export const TeamMemberCard = () => {
   );
 };
 
-export const PricingCard = () => {
-  return (
-    <div className="flex flex-col items-center space-y-5 rounded-2xl border bg-white px-5 py-5 shadow-lg">
-      <h2 className="text-3xl font-black text-blue-primary">Bènda Basic</h2>
-      <div className="flex space-x-2">
-        <span className="text-4xl font-semibold">$0</span>
-        <span>per user per month</span>
-      </div>
-      <p>Basic features for up to 10 users</p>
-      <h3 className="text-lg font-semibold">Features</h3>
-      <p>Included in our Benda Basic Plan</p>
-      <ul className="space-y-2">
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-      </ul>
-      <a
-        className="rounded-lg border bg-blue-primary px-3 py-3 text-white hover:bg-blue-500"
-        href=""
-      >
-        Start for free
-      </a>
-    </div>
-  );
-};
+export const PricingCard = ({ planType }) => {
+  const planDetails = {
+    basic: {
+      title: "Bènda Basic Plan",
+      price: "$0",
+      description: "Basic features for up to 10 users",
+      features: [
+        "1 month free access to our app",
+        "Basic support",
+        "Up to 10 users",
+        "Basic analytics",
+        "Access to community forum",
+      ],
+      bgColor: "bg-white", // Set background color for basic
+      buttonText: "Start for free",
+      buttonTextColor: "text-white",
+      buttonBgColor: "bg-blue-primary ",
+      buttonHoverColor: "hover:bg-blue-500 ",
+    },
+    standard: {
+      title: "Bènda Standard Plan",
+      price: "$19",
+      description: "Standard features for up to 50 users",
+      features: [
+        "3 months free access to our app",
+        "Priority support",
+        "Up to 50 users",
+        "Advanced analytics",
+        "Access to premium features",
+      ],
+      bgColor: "bg-white", // Set background color for standard
+      buttonText: "Choose Standard",
+      buttonTextColor: "text-white",
+      buttonBgColor: "bg-blue-primary",
+      buttonHoverColor: "hover:bg-blue-500 ",
+    },
+    premium: {
+      title: "Bènda Premium Plan",
+      price: "$49",
+      description: "Premium features for unlimited users",
+      features: [
+        "6 months free access to our app",
+        "24/7 support",
+        "Unlimited users",
+        "Premium analytics",
+        "Access to all features",
+      ],
+      bgColor: "bg-[#0A2141]", // Set background color for premium
+      buttonText: "Go Premium",
+      buttonTextColor: "text-black",
+      buttonBgColor: "bg-[#9DC6FF]",
+      headlineTextColor: "text-blue-primary",
+      textColor: "text-white",
+      buttonHoverColor: "hover:bg-blue-200 ",
+    },
+  };
 
-export const PricingCardBlack = () => {
+  // Select the appropriate plan based on the prop
+  const plan = planDetails[planType] || planDetails.basic; // Default to basic if no planType is provided
+
   return (
-    <div className="flex flex-col items-center space-y-5 rounded-2xl  bg-[#0A2141] px-5 py-5 text-white shadow-xl shadow-[#a7c3e9]">
-      <h2 className="text-3xl font-black text-[#9DC6FF]">Bènda Basic</h2>
+    <div
+      className={`flex flex-col items-center space-y-5 rounded-2xl border ${plan.bgColor} ${plan.textColor} px-5 py-5 shadow-lg`}
+    >
+      <h2 className={`text-3xl font-black text-blue-primary ${plan.textColor}`}>
+        {plan.title}
+      </h2>
       <div className="flex space-x-2">
-        <span className="text-4xl font-semibold">$25</span>
+        <span className="text-4xl font-semibold">{plan.price}</span>
         <span>per user per month</span>
       </div>
-      <p>Basic features for up to 10 users</p>
+      <p>{plan.description}</p>
       <h3 className="text-lg font-semibold">Features</h3>
-      <p>Included in our Benda Basic Plan</p>
+      <p>Included in our {plan.title}</p>
       <ul className="space-y-2">
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
-        <li className="space-x-2">
-          <i className="fa-solid fa-check"></i>
-          <span>1 month free access to our app</span>
-        </li>
+        {plan.features.map((feature: any, index: any) => (
+          <li key={index} className="space-x-2">
+            <i className="fa-solid fa-check"></i>
+            <span>{feature}</span>
+          </li>
+        ))}
       </ul>
       <a
-        className="rounded-lg  bg-[#9DC6FF] px-3 py-3 text-black hover:bg-blue-200"
+        className={`rounded-lg border px-3 py-3  ${plan.buttonHoverColor} ${plan.buttonTextColor} ${plan.buttonBgColor} `}
         href=""
       >
-        Start for free
+        {plan.buttonText}
       </a>
     </div>
   );
