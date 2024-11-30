@@ -70,7 +70,11 @@ export const Footer = () => {
             </Link>
           </li>
         </ul>
-        <form method="post" action="#" className="space-y-3 ">
+        <form
+          method="post"
+          action="#"
+          className="flex items-center space-y-3 md:block "
+        >
           <div className=" pb-2 text-lg font-bold">Subscribe</div>
           <input
             className="border bg-[#E0ECFD66] px-10 py-3"
@@ -81,14 +85,14 @@ export const Footer = () => {
           <button className=" pl-3" type="submit">
             <i className="fa-solid fa-paper-plane "></i>
           </button>
-          <p className=" text-gray-500">
+          <p className="hidden text-gray-500 md:block">
             Join our newsletter to stay up to date on features and releases
           </p>
         </form>
       </section>
-      {/* <div className="">
-        © Benda 2023. All rights reserved • Privacy Policy
-      </div> */}
+      <div className="place-self-center">
+        © Benda 2025. All rights reserved • Privacy Policy
+      </div>
     </>
   );
 };
