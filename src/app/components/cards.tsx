@@ -38,10 +38,12 @@ export const TestimonialCard = (props: any) => {
 
 export const AboutCard = (props: { heading: string; description: string }) => {
   return (
-    <section className="flex w-1/2 flex-row items-center space-x-10">
-      <div className="flex w-1/3 flex-col space-y-5">
-        <h2 className="text-2xl text-blue-primary">{props.heading}</h2>
-        <p>{props.description}</p>
+    <section className="flex w-full flex-col items-center justify-around md:flex-row">
+      <div className="flex flex-col space-y-5  md:w-1/3">
+        <h2 className="text-center text-2xl text-blue-primary md:text-left">
+          {props.heading}
+        </h2>
+        <p className="text-justify md:w-full">{props.description}</p>
       </div>
       <Image
         src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
@@ -58,24 +60,26 @@ export const InverseAboutCard = (props: {
   description: string;
 }) => {
   return (
-    <section className="flex w-1/2 flex-row items-center space-x-10">
+    <section className="flex w-full flex-col items-center justify-around space-x-10  md:flex-row-reverse ">
+      <div className="flex flex-col space-y-5 md:w-1/3">
+        <h2 className="text-center text-2xl text-blue-primary md:text-left">
+          {props.heading}
+        </h2>
+        <p className="text-justify md:w-full">{props.description}</p>
+      </div>
       <Image
         src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
         alt=""
         width={350}
-        height={135}
+        height={350}
       />
-      <div className="flex w-1/3 flex-col space-y-5">
-        <h2 className="text-2xl text-blue-primary">{props.heading}</h2>
-        <p>{props.description}</p>
-      </div>
     </section>
   );
 };
 
 export const TeamMemberCard = () => {
   return (
-    <div className="flex w-1/2 flex-row items-center space-x-10">
+    <div className="flex w-full flex-col space-x-10 md:flex-row  md:items-center md:justify-center">
       <Image
         className="rounded-lg border"
         src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
@@ -83,15 +87,15 @@ export const TeamMemberCard = () => {
         height={300}
         width={300}
       />
-      <div className="w-1/2  place-self-start">
+      <div className="place-self-start md:w-1/3">
         <p className="pb-2 text-2xl font-black">Emmanuel Sandjio</p>
         <p className="pb-7">Developer At Benda</p>
-        <p>
+        <p className="text-justify">
           Emmanuel always had a fascination for technology, and becoming a
           developer was an opportunity not only to use new technologies to their
           full potential, but also to help people by developing innovative
           solutions. He is responsible of implementing the business logic in our
-          backend. He likes playing video games and watching vlogs on youtube.
+          backend. He likes playing video games and watching vlogs on YouTube.
         </p>
         <div className="mt-10  space-x-10">
           <a className="space-x-2" href="">
