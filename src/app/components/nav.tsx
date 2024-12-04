@@ -31,7 +31,7 @@ export default function Nav() {
   return (
     <>
       <nav
-        className={`sticky top-0 z-50 flex w-full transform items-center justify-between border bg-white transition-transform duration-500 ease-in-out md:pl-10 ${
+        className={`sticky top-0 z-50 flex w-full transform items-center justify-between border bg-white shadow-lg transition-transform duration-500 ease-in-out md:pl-10 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         }`}
       >
