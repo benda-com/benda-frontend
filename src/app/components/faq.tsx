@@ -6,7 +6,7 @@ export const Faq = (props: { question: string; answer: string }) => {
   const [collapse, setCollapse] = useState(false);
 
   return (
-    <div className="flex flex-col space-y-2 border-b-2">
+    <div className="flex flex-col space-y-2 border-b-2 md:w-1/2">
       <div className="flex place-content-between items-center">
         <p className="text-lg font-bold">{props.question}</p>
         <button className="" onClick={() => setCollapse((prev) => !prev)}>

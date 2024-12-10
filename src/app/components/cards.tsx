@@ -9,17 +9,12 @@ import { Avatar } from "./widgets";
 export const TestimonialCard = (props: any) => {
   let name = props.name;
   let description = props.description;
-  description = `"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure perferendis facilis laudantium quis voluptates earum sapiente nam corporis numquam explicabo odio, ea, tenetur nequ"`;
-
-  name = "Emmanuel Sandjio";
-  let role = props.role;
-  role = "Python developer";
+  let image = props.image;
   return (
     <div className="flex flex-col space-y-3 rounded-lg border border-gray-300 px-5 py-5 shadow-xl md:w-1/4">
-      <p className="text-lg">{description}</p>
-      <Avatar />
+      <p className="text-justify text-base italic ">{description}</p>
+      <Avatar imgSrc={image} />
       <div className="text-lg font-bold">{name}</div>
-      <div className="text-sm">{role}</div>
       <ul className=" flex flex-row space-x-3 place-self-end">
         <li>
           <Link href="#">
@@ -112,7 +107,7 @@ export const TeamMemberCard = () => {
   );
 };
 
-export const PricingCard = ({ planType }) => {
+export const PricingCard = (planType: any) => {
   const planDetails = {
     basic: {
       title: "Bènda Basic Plan",
