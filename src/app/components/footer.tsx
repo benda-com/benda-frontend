@@ -26,69 +26,69 @@ export const Footer = () => {
             />
           </Link>
         </div>
-        <ul className="space-y-3 ">
-          <li className="pb-2 text-lg font-bold">Social Media</li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Linkedin
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Facebook
-            </Link>
-          </li>
-        </ul>
-        <ul className="space-y-3 ">
-          <li className="pb-2 text-lg font-bold">Pages</li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:underline" href="#">
-              About Us
-            </Link>
-          </li>
-        </ul>
-        <ul className="space-y-3 ">
-          <li className="pb-2 text-lg font-bold">Links</li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Contact
-            </Link>
-          </li>
-          <li>
-            <Link className="hover:underline" href="#">
-              Careers
-            </Link>
-          </li>
-        </ul>
-        <form
-          method="post"
-          action="#"
-          className="flex items-center space-y-3 md:block "
-        >
-          <div className=" pb-2 text-lg font-bold">Subscribe</div>
-          <input
-            className="border bg-[#E0ECFD66] px-10 py-3"
-            type="email"
-            placeholder="Enter your email"
-            required
-          />
-          <button className=" pl-3" type="submit">
-            <i className="fa-solid fa-paper-plane "></i>
-          </button>
-          <p className="hidden text-gray-500 md:block">
-            Join our newsletter to stay up to date on features and releases
-          </p>
-        </form>
+        <div className="flex w-full flex-col  md:flex-row md:justify-evenly">
+          <ul className="space-y-3 ">
+            <li className="pb-2 text-lg font-bold">Social Media</li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Linkedin
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Facebook
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-3 ">
+            <li className="pb-2 text-lg font-bold">Pages</li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Products
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="#">
+                About Us
+              </Link>
+            </li>
+          </ul>
+          <ul className="space-y-3 ">
+            <li className="pb-2 text-lg font-bold">Links</li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link className="hover:underline" href="#">
+                Careers
+              </Link>
+            </li>
+          </ul>
+          <form method="post" action="#" className="flex flex-col  space-y-3">
+            <div className="pb-2 text-lg font-bold">Subscribe</div>
+            <div>
+              <input
+                className="border bg-[#E0ECFD66] px-10 py-3"
+                type="email"
+                placeholder="Enter your email"
+                required
+              />
+              <button className=" pl-3" type="submit">
+                <i className="fa-solid fa-paper-plane "></i>
+              </button>
+            </div>
+            <p className="hidden text-gray-500 md:block">
+              Join our newsletter to stay up to date on features and releases
+            </p>
+          </form>
+        </div>
       </section>
       <div className="place-self-center">
         © Benda 2025. All rights reserved • Privacy Policy
