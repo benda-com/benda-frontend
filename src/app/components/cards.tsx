@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
+import Image, { StaticImageData } from "next/image";
 
 import { Avatar } from "./widgets";
 
@@ -31,21 +30,20 @@ export const TestimonialCard = (props: any) => {
   );
 };
 
-export const AboutCard = (props: { heading: string; description: string }) => {
+export const AboutCard = (props: {
+  heading: string;
+  description: string;
+  img: string | StaticImageData;
+}) => {
   return (
     <section className="flex w-full flex-col items-center justify-around md:flex-row">
       <div className="flex flex-col space-y-5  md:w-1/3">
         <h2 className="text-center text-2xl text-blue-primary md:text-left">
           {props.heading}
         </h2>
-        <p className="text-justify md:w-full">{props.description}</p>
+        <p className="mx-3 text-justify md:w-full">{props.description}</p>
       </div>
-      <Image
-        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
-        alt=""
-        width={350}
-        height={350}
-      />
+      <Image src={props.img} alt="" width={700} height={700} />
     </section>
   );
 };
@@ -53,53 +51,63 @@ export const AboutCard = (props: { heading: string; description: string }) => {
 export const InverseAboutCard = (props: {
   heading: string;
   description: string;
+  img: string | StaticImageData;
 }) => {
   return (
-    <section className="flex w-full flex-col items-center justify-around space-x-10  md:flex-row-reverse ">
+    <section className="flex flex-col items-center space-x-10 overflow-hidden md:w-full md:flex-row-reverse  md:justify-around ">
       <div className="flex flex-col space-y-5 md:w-1/3">
         <h2 className="text-center text-2xl text-blue-primary md:text-left">
           {props.heading}
         </h2>
-        <p className="text-justify md:w-full">{props.description}</p>
+        <p className="mx-3 text-justify md:w-full">{props.description}</p>
       </div>
-      <Image
-        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
-        alt=""
-        width={350}
-        height={350}
-      />
+      <Image src={props.img} alt="" width={700} height={700} />
     </section>
   );
 };
 
-export const TeamMemberCard = () => {
+interface TeamMemberCardProps {
+  img: string | StaticImageData;
+  name: string;
+  role: string;
+  description: string;
+  linkedinName: string;
+  githubName: string;
+  linkedinAccountLink: string;
+  githubAccountLink: string;
+}
+
+export const TeamMemberCard: React.FC<TeamMemberCardProps> = ({
+  img,
+  name,
+  role,
+  description,
+  linkedinName,
+  githubName,
+  linkedinAccountLink,
+  githubAccountLink,
+}) => {
   return (
-    <div className="flex w-full flex-col space-x-10 md:flex-row  md:items-center md:justify-center">
+    <div className="flex w-full flex-col items-center justify-center  space-x-10 md:flex-row">
       <Image
         className="rounded-lg border"
-        src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/image.png"
-        alt=""
+        src={img}
+        alt={`${name}'s picture`}
         height={300}
         width={300}
       />
       <div className="place-self-start md:w-1/3">
-        <p className="pb-2 text-2xl font-black">Emmanuel Sandjio</p>
-        <p className="pb-7">Developer At Benda</p>
-        <p className="text-justify">
-          Emmanuel always had a fascination for technology, and becoming a
-          developer was an opportunity not only to use new technologies to their
-          full potential, but also to help people by developing innovative
-          solutions. He is responsible of implementing the business logic in our
-          backend. He likes playing video games and watching vlogs on YouTube.
-        </p>
+        <p className="pb-2 text-2xl font-black">{name}</p>
+        <p className="pb-7">{role}</p>
+        <p className="text-justify">{description}</p>
         <div className="mt-10  space-x-10">
-          <a className="space-x-2" href="">
+          <a className="space-x-2" href={linkedinAccountLink}>
             <i className="fa-brands fa-linkedin"></i>
-            <span>Emmanuel_Sandjio</span>
+            <span>{linkedinName}</span>
           </a>
-          <a className="space-x-2" href="">
+          <a className="space-x-2" href={githubAccountLink}>
             <i className="fa-brands fa-github"></i>
-            <span>Sandjio</span>
+            <span>{githubName}</span>
           </a>
         </div>
       </div>
