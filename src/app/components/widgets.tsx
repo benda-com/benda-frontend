@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-import img from "@/app/images/image.png";
+import { StaticImageData } from "next/image";
 
 export const Button = (props: any) => {
   let name = props.name;
@@ -14,12 +13,16 @@ export const Button = (props: any) => {
   );
 };
 
-export const Avatar = () => {
+interface AvatarProps {
+  imgSrc: StaticImageData | string; // Can be either imported image or a string URL
+}
+
+export const Avatar: React.FC<AvatarProps> = ({ imgSrc }) => {
   return (
     <>
       <Image
         className="rounded-full "
-        src={img}
+        src={imgSrc}
         alt="Avatar"
         width={100}
         height={100}

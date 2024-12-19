@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -21,4 +20,11 @@ body {
 
 .expanded {
   max-height: 50rem;
+}
+
+.rollout-container {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
 }
