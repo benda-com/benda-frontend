@@ -15,8 +15,6 @@ import stevePicture from "@/app/images/steve-picture.png";
 import djimeliPicture from "@/app/images/djimeli-picture.png";
 import ibrahimPicture from "@/app/images/ibrahim-picture.png";
 
-const description =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi veniam eos quidem unde pariatur dolor quas animi beatae corporis quod saepe quis, cumque ex est eveniet natus vitae facilis. Ratione laborum consequatur beatae aspernatur modi facere magni dignissimos, provident culpa ipsam quos a sequi id ab suscipit ullam veritatis magnam quaerat cupiditate illo labore! Voluptates eum alias rem natus.";
 const About = () => {
   return (
     <>
@@ -25,24 +23,30 @@ const About = () => {
         <h1 className="text-4xl font-semibold">About Us</h1>
         <AboutCard
           heading="Our Vision"
-          description={description}
+          description={
+            "Empowering every mother with the future of healthcare. At Benda, we envision a world where advanced technology and compassionate care unite, ensuring safer pregnancies through real-time monitoring and AI-driven insights."
+          }
           img={teamMemberImage}
         />
         <InverseAboutCard
           heading="Our Mission"
-          description={description}
+          description={
+            "To revolutionize maternal healthcare by harnessing the power of IoT and AI. We are dedicated to delivering real-time health data to doctors, empowering them to prevent complications and safeguard the well-being of both mother and child."
+          }
           img={peopleImage}
         />
         <AboutCard
           heading="Our Values"
-          description={description}
+          description={
+            "Innovation, Empathy, and Safety. We believe in pushing the boundaries of technology to create life-saving solutions, building trust through compassionate care, and ensuring the highest standards of safety for every mother and baby."
+          }
           img={heartImage}
         />
 
         <h1 className="text-4xl font-semibold">Meet The Team</h1>
         <TeamMemberCard
           name={"Emmanuel Sandjio"}
-          role={"Developer At Benda"}
+          role={"FullStack Developer At Benda"}
           description={
             "Emmanuel always had a fascination for technology, and becoming a developer was an opportunity not only to use new technologies to their full potential, but also to help people by developing innovative solutions. He is responsible of implementing the business logic in our backend. He likes playing video games and watching vlogs on YouTube."
           }
