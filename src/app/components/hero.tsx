@@ -1,5 +1,4 @@
 import Image from "next/image";
-import mobileAppImage from "../images/mobile-app2.png";
 
 export const HeroBanner = () => {
   return (
@@ -19,7 +18,7 @@ export const HeroBanner = () => {
         <Image
           width={500}
           height={500}
-          src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/hero-banner-image.png"
+          src="https://benda-images.s3.eu-north-1.amazonaws.com/hero-banner-image.png"
           alt="A pregnant woman and her baby"
         />
       </div>
@@ -57,7 +56,7 @@ export const WatchItem = () => {
         <Image
           width={250}
           height={250}
-          src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/watch-img.png"
+          src="https://benda-images.s3.eu-north-1.amazonaws.com/watch-img.png"
           alt="A pregnant woman and her baby"
         />
       </div>
@@ -72,7 +71,9 @@ export const AppItem = () => {
         <Image
           width={250}
           height={250}
-          src={mobileAppImage}
+          src={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/mobile-app2.png"
+          }
           alt="A pregnant woman and her baby"
         />
       </div>

@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 import BendaLogo from "../components/benda-logo";
-import doctorImg from "../images/doctor-img.jpg";
 import SignUpForm from "@/app/components/sign-up";
 
 export const metadata: Metadata = {
@@ -17,7 +16,9 @@ export default function SignUpPage() {
         {/* TODO: Change the image below to something more user-friendly */}
         <Image
           className="h-full "
-          src={doctorImg}
+          src={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/doctor-img.jpg"
+          }
           alt="A doctor forming a heart shape with her stestoscope"
         />
       </section>

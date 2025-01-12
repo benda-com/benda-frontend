@@ -11,7 +11,7 @@ export const Footer = () => {
           <BendaLogo />
           <Link href="#">
             <Image
-              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/google-store.png"
+              src="https://benda-images.s3.eu-north-1.amazonaws.com/google-store.png"
               alt="Download on google-store"
               width={150}
               height={150}
@@ -19,7 +19,7 @@ export const Footer = () => {
           </Link>
           <Link href="#">
             <Image
-              src="https://benda-s3-bucket.s3.eu-north-1.amazonaws.com/media/images/apple-store.png"
+              src="https://benda-images.s3.eu-north-1.amazonaws.com/apple-store.png"
               alt="Download on apple-store"
               width={150}
               height={150}

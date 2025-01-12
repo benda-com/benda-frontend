@@ -5,15 +5,6 @@ import {
   TeamMemberCard,
 } from "../components/cards";
 import { Footer } from "../components/footer";
-import teamMemberImage from "@/app/images/team-benda.jpg";
-import heartImage from "@/app/images/IMGL9660.jpg";
-import peopleImage from "@/app/images/IMGL9735.jpg";
-import emmaPicture from "@/app/images/emma_picture.png";
-import renePicture from "@/app/images/rene_picture.png";
-import simonPicture from "@/app/images/simon_picture.png";
-import stevePicture from "@/app/images/steve-picture.png";
-import djimeliPicture from "@/app/images/djimeli-picture.png";
-import ibrahimPicture from "@/app/images/ibrahim-picture.png";
 
 const About = () => {
   return (
@@ -26,21 +17,23 @@ const About = () => {
           description={
             "Empowering every mother with the future of healthcare. At Benda, we envision a world where advanced technology and compassionate care unite, ensuring safer pregnancies through real-time monitoring and AI-driven insights."
           }
-          img={teamMemberImage}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/team-benda.jpg"
+          }
         />
         <InverseAboutCard
           heading="Our Mission"
           description={
             "To revolutionize maternal healthcare by harnessing the power of IoT and AI. We are dedicated to delivering real-time health data to doctors, empowering them to prevent complications and safeguard the well-being of both mother and child."
           }
-          img={peopleImage}
+          img={"https://benda-images.s3.eu-north-1.amazonaws.com/IMGL9735.jpg"}
         />
         <AboutCard
           heading="Our Values"
           description={
             "Innovation, Empathy, and Safety. We believe in pushing the boundaries of technology to create life-saving solutions, building trust through compassionate care, and ensuring the highest standards of safety for every mother and baby."
           }
-          img={heartImage}
+          img={"https://benda-images.s3.eu-north-1.amazonaws.com/IMGL9660.jpg"}
         />
 
         <h1 className="text-4xl font-semibold">Meet The Team</h1>
@@ -50,12 +43,12 @@ const About = () => {
           description={
             "Emmanuel always had a fascination for technology, and becoming a developer was an opportunity not only to use new technologies to their full potential, but also to help people by developing innovative solutions. He is responsible of implementing the business logic in our backend. He likes playing video games and watching vlogs on YouTube."
           }
-          img={emmaPicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/emma_picture.png"
+          }
           linkedinName={"Emmanuel_Sandjio"}
           githubName={"Sandjio"}
-          linkedinAccountLink={
-            "https://www.linkedin.com/in/sandjio-wagne-emmanuel-52ba77188/"
-          }
+          linkedinAccountLink={"https://www.linkedin.com/in/emmanuel-sandjio/"}
           githubAccountLink={"https://github.com/Sandjio"}
         />
         <TeamMemberCard
@@ -64,7 +57,9 @@ const About = () => {
           description={
             "Rene contributed to the manufacturing of the Benda watch from the designed of electronic circuits to the implementation of the end product. He is passionated by technology and innovative solutions. Also, he likes to solve complex problems which requires critical thinking and often play volleyball on his free time."
           }
-          img={renePicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/rene_picture.png"
+          }
           linkedinName={"placide-si-mvomo"}
           githubName={"placide"}
           linkedinAccountLink={
@@ -78,7 +73,9 @@ const About = () => {
           description={
             "Simon was responsible of drafting the business plan and business model, he thinks the most interesting part of his job is the fact it requires both science and intuition in managing the team, stakeholders and resources to achieve objectives. He likes watching football matches and he is a huge fan of Liverpool FC."
           }
-          img={simonPicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/simon_picture.png"
+          }
           linkedinName={"simon-ervin-ngwang"}
           githubName={"Simon"}
           linkedinAccountLink={
@@ -92,7 +89,9 @@ const About = () => {
           description={
             "Steve implemented a neural network which was used to determined the blood pressure from signals coming from the Benda smartwatch. He has always been passionate by logic, maths and IT that's why he decided to explore the universe of AI and machine learning. During his off time he likes to play piano and competing for hackathons."
           }
-          img={stevePicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/steve-picture.png"
+          }
           linkedinName={"steve-mamendja"}
           githubName={"SteveMassDev"}
           linkedinAccountLink={
@@ -106,7 +105,9 @@ const About = () => {
           description={
             "Apart from his contributions on the development of our machine learning models, Christian had a key role in the development of our mobile app due to his expertise in mobile development. His hobbies are listening to music and and reading books."
           }
-          img={djimeliPicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/djimeli-picture.png"
+          }
           linkedinName={"christian-djimeli-kafo"}
           githubName={"djimeli"}
           linkedinAccountLink={
@@ -120,7 +121,9 @@ const About = () => {
           description={
             "With his background in mechatronics, Ibrahim was able to designed the electronic circuit of the Benda Watch and printing a 3D prototype. He has a great passion for Computer science and that's what motivated him programming. During his days off, he plays basket ball and video games."
           }
-          img={ibrahimPicture}
+          img={
+            "https://benda-images.s3.eu-north-1.amazonaws.com/ibrahim-picture.png"
+          }
           linkedinName={"ibrahim-halil-njoya"}
           githubName={"ibrahim"}
           linkedinAccountLink={
