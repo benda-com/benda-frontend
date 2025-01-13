@@ -34,21 +34,21 @@ export default function Home() {
               description={`"Benda has been an absolute game-changer for me during my pregnancy. As a first-time mom, I often felt anxious about whether everything was okay, but with Benda, I can monitor my health in real time. The smartwatch tracks important parameters like my blood pressure and oxygen levels, and if anything seems off, I receive instant alerts. What I love most is that I can share this information directly with my doctor, who can provide immediate advice through the app. It’s like having a personal health assistant with me 24/7"`}
               name={"Sandra M., 28 weeks pregnant"}
               image={
-                "https://benda-images.s3.eu-north-1.amazonaws.com/pregnant_woman_img"
+                "https://benda-images.s3.eu-north-1.amazonaws.com/pregnant-woman-1.jpg"
               }
             />
             <TestimonialCard
               description={`"During my pregnancy, I used Benda, and it gave me so much peace of mind. The AI recommendations helped me stay on top of my health, and I felt reassured knowing that any abnormal readings were flagged immediately. There was even a time when my blood pressure spiked, and the app alerted me to contact my doctor right away, which probably saved me from complications. Now that my baby is here, I’m grateful for how smooth my pregnancy journey was thanks to Benda’s support."`}
               name={" Emily T., mother of a newborn"}
               image={
-                "https://benda-images.s3.eu-north-1.amazonaws.com/new_born_mother_img"
+                "https://benda-images.s3.eu-north-1.amazonaws.com/new-born-mother.jpg"
               }
             />
             <TestimonialCard
               description={`"Benda has transformed how I monitor and care for my pregnant patients. The real-time data I receive through the app allows me to catch potential issues early, often before the patient even feels symptoms. The ability to see detailed health parameters remotely makes it easier to provide timely advice without requiring frequent in-person visits. The app has also improved patient engagement—my patients feel more in control of their health, and it allows me to maintain a closer connection with them throughout their pregnancy."`}
               name={" Dr. Michael K., OB-GYN"}
               image={
-                "https://benda-images.s3.eu-north-1.amazonaws.com/doctor_michael_img"
+                "https://benda-images.s3.eu-north-1.amazonaws.com/doctor-michael.jpg"
               }
             />
           </div>
